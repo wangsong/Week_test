@@ -1,0 +1,17 @@
+<h3>Display Parents Info</h3>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Telephone:</th>
+    <th>Email:</th>
+  </tr>
+
+<% @parents.each do |parent| %>
+  <tr>
+    <td><%= parent.name %></td>
+    <td><%= parent.telephone %></td>
+    <td><%= parent.email %></td>
+  </tr>
+<% end %>
+</table>

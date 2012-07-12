@@ -1,0 +1,14 @@
+<h1><%= @students.name %></h1>
+<table>
+	 <tr>
+		<td>
+			<%= gravatar_for @students %>
+		</td>
+		<td>
+			<p>Name:<%= @students.name %></p>
+			<p>Sex:<%= @students.sex %> </p>
+			<p>Number:<%= @students.number %> </p>
+			<p>Email:<%= @students.email %> </p>
+		</td>
+	 </tr>
+ </table>

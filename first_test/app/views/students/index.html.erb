@@ -1,0 +1,36 @@
+<script type="text/javascript">
+ 
+</script>
+
+<h3>Students & Parents</h3>
+
+<table border=1 style= "border-collapse:collapse" width=300px>
+<% @students.each do |student| %>
+  <tr>
+    <th>Name</th>
+    <th>Sex</th>
+    <th>Number</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td><%= link_to student.name,student %></td>
+    <td><%= student.sex %></td>
+    <td><%= student.number %></td>
+    <td><%= student.email %></td>
+  </tr>
+  <% student.parents.each do |parent| %>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Telephone</th>
+    <th>Email</th>
+  </tr>
+   <tr>
+      <td></td>
+      <td><a href="#" onclick="alert('name')"><%= parent.name %></a></td>
+      <td><%= parent.email %></td>
+      <td><%= parent.telephone %></td>
+    </tr>
+    <% end %>
+<%end%>
+</table>
